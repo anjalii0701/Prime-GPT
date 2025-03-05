@@ -1,27 +1,25 @@
-# Prime-GPT
-# React+vite
--configuured tailwindcss
--Header
--Login form
--Sign Up form
+# Prime GPT
 
-# Features-
--Login/Sign Up Page
-    -Sign in/ Sign up form
-    -redirect to browse page
-
--Browse page(only comes after authentication)
-    -Header
-    -Main Movie
-        -Trailer in background
-        -Movie
-            -trailer in background 
-            -title and description
-            -MovieSuggestion
-                -MovieLists *N
-    -NetflixGpt
-    -Search Bar
-    -Movie Suggestion
+- React -Vite setup
+- Configured TailwindCSS 
+- Header
+- Routing of App
+- Login Form
 
 
-        
+
+
+# Features
+- Login/Sign Up
+    - Sign In /Sign up Form
+    - redirect to Browse Page
+- Browse (after authentication)
+    - Header
+    - Main Movie
+        - Tailer in Background
+        - Title & Description
+        - MovieSuggestions
+            - MovieLists * N 
+- NetflixGPT
+    - Search Bar
+    - Movie Suggestions
