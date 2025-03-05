@@ -1,6 +1,6 @@
 # Prime GPT
 
-- React -Vite setup
+- Vite setup
 - Configured TailwindCSS 
 - Header
 - Routing of App
@@ -23,3 +23,10 @@
 - NetflixGPT
     - Search Bar
     - Movie Suggestions
+
+
+
+
+
+
+    #Formic - good library for form handling
