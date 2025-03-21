@@ -15,7 +15,9 @@
 -Created ReduxStore with userslice
 -Implemented SignOut
 -Update profile
-
+-Fetch from tmdb movies
+-BugFix :sign up user displayname and profile picture update
+-BugFix : if the user is not logged in redirect browse to login page and vice-versa
 
 
 
