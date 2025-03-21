@@ -13,6 +13,8 @@
 -Create sign up in firebase
 -Implement signin user api
 -Created ReduxStore with userslice
+-Implemented SignOut
+-Update profile
 
 
 
