@@ -5,6 +5,7 @@ import {createUserWithEmailAndPassword ,signInWithEmailAndPassword ,updateProfil
 import { auth } from '../utils/firebase';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import {BG_URL, USER_AVATAR} from '../utils/constants';
 
 
 const Login = () => {
@@ -34,7 +35,7 @@ const Login = () => {
       const user = userCredential.user;
       updateProfile(user, {
         displayName: name.current.value ,
-        photoURL: "https://avatars.githubusercontent.com/u/182404971?v=4"
+        photoURL: USER_AVATAR
       }).then(() => {
         const { uid, email ,displayName ,photoURL } = auth.currentUser;
 
@@ -89,7 +90,7 @@ const Login = () => {
     <div>
       <Header/>
       <div className="absolute">
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg"/>
+        <img src={BG_URL}/>
       </div>
       <form onSubmit ={(e)=>e.preventDefault()}className=" p-10 bg-black/80 w-3/12 my-36 absolute mx-auto right-0 left-0 rounded-lg">
         <h1 className='font-bold text-3xl p-4 text-white'>{isSignInForm ?"Sign In" :"Sign Up"}</h1>

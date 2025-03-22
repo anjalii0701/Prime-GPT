@@ -18,7 +18,8 @@
 -Fetch from tmdb movies
 -BugFix :sign up user displayname and profile picture update
 -BugFix : if the user is not logged in redirect browse to login page and vice-versa
-
+-Unsubscribe to the onAuthStateChange Callback
+-Add hardcoded values to constants file
 
 
 
