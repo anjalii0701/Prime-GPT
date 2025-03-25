@@ -10,19 +10,17 @@ const MainContainer = () => {
 
   const mainMovie = movies[0];
   console.log(mainMovie);
+ 
+  const {original_title ,overview ,id }= mainMovie;
 
-  const {original_title ,overview ,title}= mainMovie;
-  console.log(original_title);
-  console.log(title);
-  console.log(overview);
 
 
 
   return (
     <div>
-      <VideoTitle title={original_title || title} overview={overview} />
+      <VideoTitle title={original_title } overview={overview} />
 
-      <VideoBackground/>
+      <VideoBackground movie_id ={id}/>
     </div>
   );
 };
