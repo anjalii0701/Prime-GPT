@@ -30,6 +30,7 @@
 -embedded you tube vedio and make it autoplay and mute
 -Tailwind classes to make main container look awesome
 -Build secondary component
+-GPT Search feature
 
 
 # Features
