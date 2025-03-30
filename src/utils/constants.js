@@ -21,4 +21,4 @@ export const options = {
     {identifier:"spanish" ,name:"Spanish"} 
   ]
 
-  export const OPENAI_KEY ="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";
+  export const OPENAI_KEY ="";
