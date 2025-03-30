@@ -6,6 +6,7 @@ import { useDispatch , useSelector} from "react-redux";
 import { useNavigate ,useLocation} from 'react-router-dom';
 import { addUser , removeUser} from "../utils/userSlice" ;
 import { LOGO } from "../utils/constants" ;
+import { ChevronDownIcon } from "@heroicons/react/24/solid"; 
 import { toggleGptSearchView } from '../utils/gptSlice';
 import { SUPPORTED_LANGUAGES } from '../utils/constants';
 import { changeLanguage } from '../utils/configSlic';
@@ -69,11 +70,20 @@ const Header = () => {
       <div className='flex items-center p-2'>
         
         {(location.pathname==="/" || showGptSearch)&&(
-          <select className="p-2 bg-black/80  m-2 text-white rounded-2xl;" onChange={handleLanguageChange}>
-          {SUPPORTED_LANGUAGES.map((lang)=>(
-            <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>
-          ))}
-          </select>
+          <div className='relative inline-block'>
+            <div className="flex items-center border border-gray-500 rounded-full bg-black/50 px-3 py-1 cursor-pointer w-fit">
+              <select className="appearance-none bg-transparent font-semibold text-white focus:outline-none cursor-pointer pr-10 pl-4"
+              onChange={handleLanguageChange}
+              >
+              {SUPPORTED_LANGUAGES.map((lang)=>(
+                <option className="bg-white text-black" key={lang.identifier} value={lang.identifier}>{lang.name}</option>
+              ))}
+              </select>
+              <ChevronDownIcon className="w-0 h-0 border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-4 border-white -ml-5" />
+
+            </div>
+          </div>
+         
         )}
         
        {user&&

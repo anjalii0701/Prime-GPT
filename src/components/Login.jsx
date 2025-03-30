@@ -6,6 +6,8 @@ import { auth } from '../utils/firebase';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import {BG_URL, USER_AVATAR} from '../utils/constants';
+import lang from "../utils/languageConstants";
+import { useSelector } from 'react-redux';
 
 
 const Login = () => {
@@ -17,6 +19,7 @@ const Login = () => {
   const name =useRef(null);
   const email=useRef(null);
   const password=useRef(null);
+  const langId =useSelector((store)=>store.config.lang);
   
 
   const handleButtonClick=()=>{
@@ -88,29 +91,29 @@ const Login = () => {
     <div>
       <Header/>
       <div className="absolute">
-        <img src={BG_URL}/>
+        <img src={BG_URL} className="scale-120"/>
       </div>
       <form onSubmit ={(e)=>e.preventDefault()}className=" p-10 bg-black/80 w-3/12 my-36 absolute mx-auto right-0 left-0 rounded-lg">
-        <h1 className='font-bold text-3xl p-4 text-white'>{isSignInForm ?"Sign In" :"Sign Up"}</h1>
+        <h1 className='font-bold text-3xl p-4 text-white'>{isSignInForm ?lang[langId].signInHeading:lang[langId].signUp}</h1>
         {!isSignInForm &&(<input 
           ref={name}
           type="text"
-          placeholder='Full Name' 
+          placeholder={lang[langId].fullName} 
           className="p-4 my-3  bg-gray-700 w-full h-1/2 text-white" />)
         }
         <input 
           ref={email}
           type="text"
-          placeholder='Email Address' 
+          placeholder={lang[langId].email} 
           className="p-4 my-3  bg-gray-700 w-full h-1/2 text-white" />
         <input 
         ref={password}
         type="password" 
-        placeholder='Password' 
+        placeholder={lang[langId].password}
         className="p-4 my-3 bg-gray-700 w-full h-1/2 text-white" />
         <p className='text-red-500 font-bold text-lg py-2'>{errorMessage}</p>
-        <button className="p-4 my-4 bg-red-700 text-white w-full rounded-lg cursor-pointer" onClick={handleButtonClick}>{isSignInForm ?"Sign In" : "Sign Up"}</button>
-        <p className="text-white hover:text-gray-500 cursor-pointer" onClick={toggleSignInForm}>{isSignInForm ?"New to Netflix ? Sign up now " :"Already registered ? Sign In now"}</p>
+        <button className="p-4 my-4 bg-red-700 text-white w-full rounded-lg cursor-pointer" onClick={handleButtonClick}>{isSignInForm ? lang[langId].signInHeading:lang[langId].signUp }</button>
+        <p className="text-white hover:text-gray-500 cursor-pointer" onClick={toggleSignInForm}>{isSignInForm ?lang[langId].newAccountForSignUp :lang[langId].alreadyRegisteredAccount}</p>
       </form>
     </div>
   );
