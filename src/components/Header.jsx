@@ -89,7 +89,15 @@ const Header = () => {
        {user&&
        (
         <div className="flex items-center p-2" >
-           <button 
+          <button 
+          className='py-2 px-2 mx-4 my-2  bg-purple-800 rounded text-white'
+           onClick={handleSearchClick}>Search
+          </button>
+
+
+
+
+          <button 
           className="py-2 px-2 mx-4 my-2  bg-purple-800 rounded text-white" 
           onClick ={handleGptSearchClick}>
           {showGptSearch? "Home Page" :"GPT Search"}
