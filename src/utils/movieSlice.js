@@ -27,6 +27,7 @@ const moviesSlice = createSlice ({
         clearSearchMovies :(state,action)=>{
             state.searchVideo=[];
         }
+     
     }
 })
 

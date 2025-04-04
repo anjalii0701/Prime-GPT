@@ -112,7 +112,7 @@ const Login = () => {
         placeholder={lang[langId].password}
         className="p-4 my-3 bg-gray-700 w-full h-1/2 text-white" />
         <p className='text-red-500 font-bold text-lg py-2'>{errorMessage}</p>
-        <button className="p-4 my-4 bg-red-700 text-white w-full rounded-lg cursor-pointer" onClick={handleButtonClick}>{isSignInForm ? lang[langId].signInHeading:lang[langId].signUp }</button>
+        <button className="p-4 my-4 bg-red-700 text-white w-full rounded-lg cursor-pointer hover:bg-red-800" onClick={handleButtonClick}>{isSignInForm ? lang[langId].signInHeading:lang[langId].signUp }</button>
         <p className="text-white hover:text-gray-500 cursor-pointer" onClick={toggleSignInForm}>{isSignInForm ?lang[langId].newAccountForSignUp :lang[langId].alreadyRegisteredAccount}</p>
       </form>
     </div>
