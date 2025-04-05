@@ -122,7 +122,7 @@ const Login = () => {
         className='w-full p-3 my-2 border text-white text-lg  rounded focus:outline-none focus:ring-2 focus:ring-white-600' />
         <p className='text-red-500 font-bold text-lg py-2'>{errorMessage}</p>
         <button className="p-4 my-4 bg-red-700 text-lg  text-white w-full rounded-lg cursor-pointer hover:bg-red-800" onClick={handleButtonClick}>{isSignInForm ? lang[langId].signInHeading:lang[langId].signUp }</button>
-        <p className="text-white hover:text-gray-500 text-lg  cursor-pointer" onClick={toggleSignInForm}>{isSignInForm ?lang[langId].newAccountForSignUp :lang[langId].alreadyRegisteredAccount}</p>
+        <p className="text-white hover:text-gray-500 pb-8  cursor-pointer" onClick={toggleSignInForm}>{isSignInForm ?lang[langId].newAccountForSignUp :lang[langId].alreadyRegisteredAccount}</p>
       </form>
     </div>
   );
