@@ -64,7 +64,7 @@ const Header = () => {
   return (
 <div className={`w-full fixed top-0 px-6 py-3 z-50 flex justify-between items-center ${isTyping ? "bg-black" : "bg-gradient-to-b from-black"}`}>
 <img
-        className="w-36 cursor-pointer"
+        className="w-45 cursor-pointer"
         src={LOGO}
         alt="logo"
         onClick={() => navigate("/browse")}
