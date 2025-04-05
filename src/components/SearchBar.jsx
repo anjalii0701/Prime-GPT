@@ -2,6 +2,7 @@ import React from 'react';
 import { Search, X } from "lucide-react"; 
 import { useDispatch, useSelector } from 'react-redux';
 import { setQuery, toggleSearchSlice } from '../utils/searchSlice';
+import useSearchMovies from '../hooks/useSearchMovies';
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const SearchBar = () => {
     dispatch(setQuery("")); // clear the input
     dispatch(toggleSearchSlice()); // collapse the search bar
   };
+  useSearchMovies(); 
 
   return (
     <div className="relative w-96">

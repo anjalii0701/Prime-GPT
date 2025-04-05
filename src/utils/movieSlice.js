@@ -22,10 +22,10 @@ const moviesSlice = createSlice ({
             state.trailerVideo =action.payload;
         },
         addSearchMovies :(state ,action)=>{
-            state.searchVideo =action.payload;
+            state.SearchMovies =action.payload;
         },
-        clearSearchMovies :(state,action)=>{
-            state.searchVideo=[];
+        clearSearchMovies :(state)=>{
+            state.searchMovies=[];
         }
      
     }
